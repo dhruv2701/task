@@ -92,7 +92,7 @@ app.get("/date",async (req,res)=>{
             }       
         }
         allusersDuration = Math.floor(Math.abs(end_date - start_date))
-        res.send(`Reading duration of given user is ${allusersDuration/60} minutes`);
+        res.send(`Reading duration of all users is ${allusersDuration/60} minutes`);
     }
     catch(e){
         res.status(500).send(e);
