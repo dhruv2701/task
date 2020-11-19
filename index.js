@@ -24,9 +24,10 @@ app.get("/",(req,res)=>{
     res.render("form");
 })
 
+
+// user reading duration
 let start_date=0,end_date=0;
 let userDuration = 0;
-
 app.get("/user",async (req,res)=>{
     try{
         const User = await Read.find({user:"Dhruv"});
@@ -49,6 +50,8 @@ app.get("/user",async (req,res)=>{
     }
 });
 
+
+//no of users read the same book
 app.get("/book", async(req,res)=>{
     try{
         const book = await Read.find({book:"helen keller"});   
@@ -75,6 +78,7 @@ app.get("/book", async(req,res)=>{
 });
 
 
+// total reading of a given day
 let start_type=0,end_type=0;
 let allusersDuration;
 
