@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/books">All details</a>
+    <h2>Add Book and User Details</h2>
+    <form action="/books" method="POST">
+        <input type="String" placeholder="user" name="read[user]" required>
+        <input type="String" placeholder="book" name="read[book]" required >
+        <input type="date" placeholder="date" name="read[timeStamp]">
+        <input type="String" placeholder="event" name="read[event_type]" required> 
+        <button>submit</button> 
+    </form>
+    <h2>Find by date</h2>
+    <form action="/date" method="GET">
+        <input type="date" placeholder="find by date" name="timeStamp">
+        <button>submit</button>
+    </form>
+     
+</body>
+</html>
